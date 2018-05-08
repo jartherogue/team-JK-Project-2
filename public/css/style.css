@@ -11,3 +11,109 @@ body {
     color: teal;
     font-size: 20px;
 }
+body {
+    font-family: 'Product Sans', Arial, sans-serif;
+    font-size: 16px;
+    background-color: #F2F2F2;
+   }
+   .mainContent {
+    margin-top: 75px;
+   }
+   .starter-template{
+   margin-top: 100px;
+   }
+   
+   .testField{
+   border: 1px solid #828282;
+   padding: 20px;
+   
+   }
+   
+   #swipeMe{
+   background-color: #10BBB3;
+   color: #FFFFFF;
+   padding: 10px;
+   
+   }
+   
+   /* fixed nav buttons */
+   
+   .l-arrow {
+    position: fixed;
+   left: 0;
+   
+   }
+   .r-arrow {
+    position: fixed;
+    right: 0;
+   }
+   
+   /* button styling */
+   .btn {
+    border-radius: 50%;  
+    background-color: #ddd;
+    border: none;
+    color: black;
+    padding:  20px;
+    text-align: center;
+    font-size: 16px;
+    margin: 4px 2px;
+    transition: 0.3s;
+   }
+   
+   .btn:hover {
+    background-color: black;
+    color: white;
+   }
+   
+   
+   
+   /* flex box */
+   .wrapper {
+    display: flex;  
+    flex-flow: row wrap;
+    font-weight: bold;
+    text-align: center;
+   }
+   
+   .wrapper > * {
+    padding: 10px;
+    flex: 1 100%;
+   }
+   
+   .header {
+    background: tomato;
+   }
+   
+   .footer {
+    background: lightgreen;
+   }
+   
+   .main {
+    text-align: left;
+    background: deepskyblue;
+   }
+   
+   .aside-1 {
+    background: gold;
+   }
+   
+   .aside-2 {
+    background: hotpink;
+   }
+   
+   @media all and (min-width: 600px) {
+    .aside { flex: 1 auto; }
+   }
+   
+   @media all and (min-width: 800px) {
+    .main    { flex: 3 0px; }
+    .aside-1 { order: 1; }
+    .main    { order: 2; }
+    .aside-2 { order: 3; }
+    .footer  { order: 4; }
+   }
+   
+   body {
+    padding: 2em; 
+   }
