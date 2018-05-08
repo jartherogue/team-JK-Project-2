@@ -1,0 +1,13 @@
+body {
+    background-color: teal;
+    color: white;
+    font-size: 25px;
+}
+
+.navbar-default .navbar-brand,
+.navbar-default .navbar-nav>li>a,
+.navbar-default .navbar-nav>.active>a, .navbar-default .navbar-nav>.active>a:focus, .navbar-default .navbar-nav>.active>a:hover
+{
+    color: teal;
+    font-size: 20px;
+}
