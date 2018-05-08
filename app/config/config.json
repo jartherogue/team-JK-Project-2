@@ -1,0 +1,9 @@
+{
+    "development": {
+      "username": "root",
+      "password": "password",
+      "database": "follyFinder_db",
+      "host": "localhost",
+      "dialect": "mysql"
+    }
+  }
