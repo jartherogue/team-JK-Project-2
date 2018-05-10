@@ -86,7 +86,7 @@ $(document).ready(function() {
     }
    
     // This function constructs a todo-item row
-    function createNewRow(activite) {
+    function createNewRow(activitie) {
       var $newInputRow = $(
         [
           "<li class='list-group-item activitie-item'>",

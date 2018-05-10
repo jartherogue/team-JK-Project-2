@@ -1,3 +1,3 @@
-CREATE DATABASE follyFinder_db;
+CREATE DATABASE follyfinder_db;
 
-USE follyFinder_db;
+USE follyfinder_db;
