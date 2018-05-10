@@ -12,10 +12,10 @@ var Activities = sequelize.define("activitie", {
   },
   timestamps: false
 });
-    return Todo;
+    return Activities;
 };
 // Syncs with DB
-Todo.sync();
+Activities.sync();
 
 
-module.exports = Todo;
+module.exports = Activities;
