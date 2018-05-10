@@ -37,14 +37,37 @@ $("#submit-button").on('click', function () {
     var Description = $("#description-input").val().trim();
 
     // local new train place holder
-    var newActivity = {
+    var actitivies = {
         Date: Date,
         Time: Time,
         City: City,
         State: State,
         Image: Image,
-        Description: Description,
+        Description: Description
     }
+    $.post("/api/activities", actitivies).then(function (response) {
+        $.get("/api/activiies", function (req, res) {
+            console.log("test");
+        });
+    })
+
+
+    // app.post("/api/activities", function (req, res) {
+    //     // create takes an argument of an object describing the item we want to
+    //     // insert into our table. In this case we just we pass in an object with a text
+    //     // and complete property
+    //     db.Todo.create({
+    //         text: req.body.text,
+    //         complete: req.body.complete
+    //     }).then(function (dbTodo) {
+    //         // We have access to the new todo as an argument inside of the callback function
+    //         res.json(dbTodo);
+    //     });
+    // });
+
+
+
+
 
     // console log input New train variables
     console.log(Date);
@@ -55,7 +78,7 @@ $("#submit-button").on('click', function () {
     console.log(Description);
 
     //uploads input to firebase
-    db.ref().push(newActivity);
+    // db.ref().push(newActivity);
 
     // clears input fields
     $('input').val("");
