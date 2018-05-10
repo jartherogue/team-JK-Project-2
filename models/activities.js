@@ -28,7 +28,6 @@ var Activities = sequelize.define("activitie", {
     type: Sequelize.STRING
   }
 });
-return Activities;
 
 // };
 
