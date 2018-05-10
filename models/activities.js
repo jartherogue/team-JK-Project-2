@@ -7,15 +7,30 @@ var Activities = sequelize.define("activitie", {
   id: {
     type: Sequelize.STRING
   },
-  complete: {
-    type: Sequelize.BOOLEAN
+  date: {
+    type: Sequelize.INTEGER
   },
-  timestamps: false
+  time: {
+    type: Sequelize.TIME
+  },
+  city: {
+    type: Sequelize.STRING
+  },
+  state: {
+    type: Sequelize.STRING
+  },
+  photo: {
+    type: Sequelize.BLOB
+  },
+  description: {
+    type: Sequelize.STRING
+  }
 });
-    return Activities;
+  return Activities;
+
 };
-// Syncs with DB
-Activities.sync();
+
+  Activities.sync();
 
 
 module.exports = Activities;

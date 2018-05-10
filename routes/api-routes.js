@@ -7,7 +7,7 @@ module.exports = function(app) {
  // GET route for getting all of the todos
  app.get("/api/activities", function(req, res) {
 
-   db.Activitie.findAll({}).then(function(results) {
+   db.Activities.findAll({}).then(function(results) {
      res.json(results);
    });
    // Write code here to retrieve all of the todos from the database and res.json them
@@ -20,7 +20,7 @@ module.exports = function(app) {
    var activities = req.body.text;
 
    if (req.params.activities) {
-   db.Activitie.create({
+   db.Activities.create({
      text: req.body.text,
      complete: req.body.complete
    }).then(function(result) {
@@ -35,7 +35,7 @@ module.exports = function(app) {
  // DELETE route for deleting todos. We can get the id of the todo to be deleted from
  // req.params.id
  app.delete("/api/activities/:id", function(req, res) {
-   db.Activitie.destroy({
+   db.Activities.destroy({
      text: req.body.text,
      complete: req.body.complete
    }).then(function(dbActivitie) {
@@ -48,7 +48,7 @@ module.exports = function(app) {
 
  // PUT route for updating todos. We can get the updated todo data from req.body
  app.put("/api/activities", function(req, res) {
-   db.Activitie.update({
+   db.Activities.update({
      where: {
        text: req.params.text,
        complete: req.params.complete
