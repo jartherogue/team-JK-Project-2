@@ -64,12 +64,12 @@ $(document).ready(function() {
       }
     }
    
-    // This function updates a todo in our database
-    function updateActivity(activitie) {
+    // This function updates an activity in our database
+    function updateActivity(activities) {
       $.ajax({
         method: "PUT",
         url: "/api/activities",
-        data: activitie
+        data: activities
       }).then(getActivities);
     }
    
@@ -85,13 +85,13 @@ $(document).ready(function() {
       }
     }
    
-    // This function constructs a todo-item row
+    // This function constructs an activity row
     function createNewRow(activitie) {
       var $newInputRow = $(
         [
           "<li class='list-group-item activitie-item'>",
           "<span>",
-          activitie.text,
+          activities.text,
           "</span>",
           "<input type='text' class='edit' style='display: none;'>",
           "<button class='delete btn btn-danger'>x</button>",
@@ -100,24 +100,24 @@ $(document).ready(function() {
         ].join("")
       );
    
-      $newInputRow.find("button.delete").data("id", activitie.id);
+      $newInputRow.find("button.delete").data("id", activities.id);
       $newInputRow.find("input.edit").css("display", "none");
-      $newInputRow.data("activitie", activitie);
-      if (activitie.complete) {
+      $newInputRow.data("activitie", activities);
+      if (activities.complete) {
         $newInputRow.find("span").css("text-decoration", "line-through");
       }
       return $newInputRow;
     }
    
-    // This function inserts a new todo into our database and then updates the view
+    // This function inserts a new activity into our database and then updates the view
     function insertActivity(event) {
       event.preventDefault();
-      var activitie = {
+      var activities = {
         text: $newItemInput.val().trim(),
         complete: false
       };
    
-      $.post("/api/activities", activitie, getActivities);
+      $.post("/api/activities", activities, getActivities);
       $newItemInput.val("");
     }
    });
