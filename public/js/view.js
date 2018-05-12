@@ -120,4 +120,6 @@ $(document).ready(function() {
       $.post("/api/activities", activities, getActivities);
       $newItemInput.val("");
     }
+
+
    });
