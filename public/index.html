@@ -11,6 +11,34 @@
 </head>
 
 <body>
+        <button type="button" class="btn btn-info btn-lg" data-toggle="modal" data-target="#myModal">Login</button>
+        <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+                <div class="modal-dialog modal-dialog-centered" role="document">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h5 class="modal-title" id="exampleModalLongTitle">Login</h5>
+                            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                <span aria-hidden="true">&times;</span>
+                            </button>
+                        </div>
+                        <div class="modal-body">
+                            <form>
+                                <div class="form-group">
+                                    <label for="email" class="col-form-label">Email:</label>
+                                    <input type="text" class="form-control" id="email">
+                                </div>
+                                <div class="form-group">
+                                        <label for="password" class="col-form-label">Password:</label>
+                                        <input type="text" class="form-control" id="password">
+                                    </div>
+                            </form>
+                            </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-secondary" data-dismiss="modal">Enter</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
     <nav class="navbar navbar-default navbar-fixed-top">
         <div class="container">
             <div class="navbar-header">
@@ -39,33 +67,6 @@
             <!--/.nav-collapse -->
         </div>
     </nav>
-    <div class="modal fade" id="exampleModalCenter" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
-        <div class="modal-dialog modal-dialog-centered" role="document">
-            <div class="modal-content">
-                <div class="modal-header">
-                    <h5 class="modal-title" id="exampleModalLongTitle">Sign In</h5>
-                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                        <span aria-hidden="true">&times;</span>
-                    </button>
-                </div>
-                <div class="modal-body">
-                    <form>
-                        <div class="form-group">
-                            <label for="email" class="col-form-label">Email:</label>
-                            <input type="text" class="form-control" id="email">
-                        </div>
-                        <div class="form-group">
-                                <label for="password" class="col-form-label">Password:</label>
-                                <input type="text" class="form-control" id="password">
-                            </div>
-                </div>
-                <div class="modal-footer">
-                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-                    <button type="button" class="btn btn-primary">Save changes</button>
-                </div>
-            </div>
-        </div>
-    </div>
     <div class="container">
         <p>Swipe Functionality
             <div class="starter-template row">
@@ -106,6 +107,9 @@
     <script src="../../assets/js/ie10-viewport-bug-workaround.js"></script>
     <!-- Viewport variables -->
     <script type="text/javascript">
+    $('#myModal').on('shown.bs.modal', function () {
+      $('#myInput').trigger('focus')
+    })
     </script>
     <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.0/jquery.min.js'></script>
     <script src='https://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js'></script>
