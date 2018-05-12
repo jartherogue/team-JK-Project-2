@@ -1,33 +1,26 @@
-// The code in addactivities.js handles what happens when the user clicks the "create activity" button.
+$(document).ready(function () {
+  // Getting references to the name input and author container, as well as the table body
+  $(document).on("submit", "#user-form", insertUser);
+  function insertUser(event) {
+      event.preventDefault();
+      var User = {
+          first_name: $("#first_name").val().trim(),
+          last_name: $("#last_name").val().trim(),
+          email_address: $("#email").val().trim(),
+          password: $("#password").val().trim(),
+      };
+      $("#date").val("");
+      $("#time").val("");
+      $("#city").val("");
+      $("#state").val("");
+      $("#image").val("");
+      $("#description").val("");
 
-// When user clicks add-btn
-$("#add-btn").on("click", function(event) {
-  event.preventDefault();
-
-  // Make a new Activity object
-  var newActivity = {
-    date: $("#date").val().trim(),
-    time: $("#time").val().trim(),
-    city: $("#city").val().trim(),
-    state: $("#state").val().trim(),
-    image: $("#image").val().trim(),
-    description: $("#description").val().trim()
-  };
-
-  // Send an AJAX POST-request with jQuery
-  $.post("/api/new", newActivity)
-    // On success, run the following code
-    .then(function(data) {
-      // Log the data we found
-      console.log(data);
-    });
+      $.post("/api/actvities", Activities);
+  }
+});
 
   // Empty each input box by replacing the value with an empty string
-  $("#date").val("");
-  $("#time").val("");
-  $("#city").val("");
-  $("#state").val("");
-  $("#image").val("");
-  $("#description").val("");
 
-});
+
+

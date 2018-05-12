@@ -23,12 +23,20 @@ module.exports = function(app) {
    db.Activities.create({
      text: req.body.text,
      complete: req.body.complete
-   }).then(function(result) {
-     return res.json(result);
+   }).then(function(dbactivities) {
+     return res.json(dbactivities);
    });
    // Write code here to create a new todo and save it to the database
    // and then res.json back the new todo to the user
  };
+
+ app.post("/api/users", function(req, res) {
+  db.Users.create(req.body).then(function(dbuser) {
+    res.json(dbuser);
+  }).catch(function(error){
+      res.status(401).json(error);
+  })
+});
 
 
 
@@ -38,9 +46,9 @@ module.exports = function(app) {
    db.Activities.destroy({
      text: req.body.text,
      complete: req.body.complete
-   }).then(function(dbActivitie) {
+   }).then(function(dbActivities) {
      // We have access to the new todo as an argument inside of the callback function
-     res.json(dbActivitie);
+     res.json(dbActivities);
    // Use the sequelize destroy method to delete a record from our table with the
    // id in req.params.id. res.json the result back to the user
  });
@@ -54,7 +62,7 @@ module.exports = function(app) {
        complete: req.params.complete
      }
    }).then(function(results) {
-     res.json(dbActivitie);
+     res.json(dbActivities);
    });
    });
  });
