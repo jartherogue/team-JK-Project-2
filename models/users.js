@@ -1,19 +1,17 @@
-var Sequelize = require("sequelize");
-// sequelize (lowercase) references my connection to the DB.
-var sequelize = require("../config/connection.js");
-
-// module.exports = function (sequelize, DataTypes) {
-    var User = sequelize.define('user', {
+module.exports = function (sequelize, DataTypes) {
+    var Users = sequelize.define("Users", {
         id: {
-            type: Sequelize.INTEGER,
-            autoIncrement: true,
-            primaryKey: true
+            type: DataTypes.INTEGER
+            , autoIncrement: true
+            , primaryKey: true
         },
         first_name: {
-            type: Sequelize.STRING
+            type: DataTypes.STRING,
+            allowNull: false,
         },
         last_name: {
-            type: Sequelize.STRING
+            type: DataTypes.STRING,
+            allowNull: false,
         },
         email_address: {
             type: DataTypes.STRING,
@@ -24,12 +22,17 @@ var sequelize = require("../config/connection.js");
             }
         },
         password: {
-            type: Sequelize.STRING
+            type: DataTypes.STRING
+            , allowNull: false
         }
     });
-// };
-    // Syncs with DB
-    User.sync();
-
-
-module.exports = User;
+    Users.associate = function(models) {
+        // Associating Users with Activities
+        // When a User is deleted, also delete any Activities
+        Users.hasMany(models.Activities, {
+          onDelete: "cascade"
+        });
+      };
+    
+      return Users;
+    };
