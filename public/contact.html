@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>jQuery Swipe Left or Right</title>
+  <title>Folly Finder Contact Page</title>
   <link href='https://fonts.googleapis.com/css?family=Product+Sans:400,400i,700,700i' rel='stylesheet' type='text/css'>
   <script src="https://use.fontawesome.com/e0caea0977.js"></script>
   <link rel='stylesheet prefetch' href='https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/css/bootstrap.min.css'>
@@ -19,12 +19,12 @@
           <span class="icon-bar"></span>
           <span class="icon-bar"></span>
         </button>
-        <a class="navbar-brand" href="#">Project name</a>
+        <a class="navbar-brand" href="#">Folly Finder</a>
       </div>
       <div id="navbar" class="collapse navbar-collapse">
         <ul class="nav navbar-nav">
           <li class="active">
-            <a href="#">Home</a>
+            <a href="./index.html">Home</a>
           </li>
           <li>
             <a href="#about">About</a>
@@ -38,22 +38,36 @@
     </div>
   </nav>
   <div class="container">
-    <p>Swipe Functionality
+    <p>
       <div class="starter-template row">
         <div class="col-md-6 col-md-offset-3 testField">
           <p>
-            <b>Swipe Functionality:</b> swipe left
-            <em>(to increase)</em> or right
-            <em>(to decrease)</em> the number</p>
-          <h2 id="count">1</h2>
-          <div id="swipeMe">
-            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Debitis eum perspiciatis deleniti quaerat sequi facere molestias,
-            beatae est laboriosam unde. Quibusdam officia dolores laborum nulla facilis dignissimos in ullam. Quia!
-          </div>
-          <br>
-          <a href="#" class="previous round" id="pgPrev">&#8249;</a>
-          <a href="#" class="next round" id="pgNext">&#8250;</a>
-          <h2 id="count2"></h2>
+            <b>Contact Us:
+                    <form action="follyfinder@gmail.com" method="post" enctype="text/plain">
+                <form role="form" method="post" id="reused_form">
+                    <div class="form-group">
+                        <label for="name"> Name:</label>
+                        <input type="text" class="form-control" id="name" name="name" required maxlength="50">
+                    </div>
+                    <div class="form-group">
+                        <label for="email"> Email:</label>
+                        <input type="email" class="form-control" id="email" name="email" required maxlength="50">
+                    </div>
+                    <div class="form-group">
+                        <label for="name"> Message:</label>
+                        <textarea class="form-control" type="textarea" name="message" id="message" placeholder="Your Message Here" maxlength="6000"
+                            rows="7"></textarea>
+                    </div>
+                    <button type="submit" class="btn btn-lg btn-success pull-right" id="btnContactUs">Send &rarr;</button>
+                </form>
+                <div id="success_message" style="width:100%; height:100%; display:none; ">
+                    <h3>Sent your message successfully!</h3>
+                </div>
+                <div id="error_message" style="width:100%; height:100%; display:none; ">
+                    <h3>Error</h3> Sorry there was an error sending your form. </div>
+            </div>
+        </div>
+    </form>
         </div>
       </div>
       <hr>
@@ -71,25 +85,8 @@
   <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
   <script src="../../assets/js/ie10-viewport-bug-workaround.js"></script>
   <!-- Viewport variables -->
-  <script type="text/javascript">
-    var vpWidth = $(window).width();
-    var vpHeight = $(window).height();
-    $("#swipeMe").on("swipeleft", function () {
-      var counter = parseInt($("#count").text()) + 1;
-      $("#count").text(counter);
-    });
-    $("#swipeMe").on("swiperight", function () {
-      var counter = parseInt($("#count").text()) - 1;
-      $("#count").text(counter);
-    });
-      $("#pgPrev").click(function () {
-        var counter = parseInt($("#count").text()) + 1;
-      $("#count").text(counter);Í
-      });
-      $("#pgNext").click(function () {
-        var counter = parseInt($("#count").text()) - 1;
-      $("#count").text(counter);
-      });
+ 
+ 
   </script>
   <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.0/jquery.min.js'></script>
   <script src='https://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js'></script>
