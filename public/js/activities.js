@@ -26,7 +26,7 @@ $("#pgNext").click(function () {
 
 
 // input new activity
-// on click submit button adds trains
+// on click submit button adds activity
 $("#submit-button").on('click', function () {
     //user input
     var Date = $("#date-input").val().trim();
@@ -36,7 +36,7 @@ $("#submit-button").on('click', function () {
     var Image = $("#image-input").val().trim();
     var Description = $("#description-input").val().trim();
 
-    // local new train place holder
+    // local new activity place holder
     var actitivies = {
         Date: Date,
         Time: Time,

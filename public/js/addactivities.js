@@ -1,10 +1,10 @@
-// The code in add.js handles what happens when the user clicks the "Add a book" button.
+// The code in addactivities.js handles what happens when the user clicks the "create activity" button.
 
 // When user clicks add-btn
 $("#add-btn").on("click", function(event) {
   event.preventDefault();
 
-  // Make a newBook object
+  // Make a new Activity object
   var newActivity = {
     date: $("#date").val().trim(),
     time: $("#time").val().trim(),
