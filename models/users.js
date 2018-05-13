@@ -1,10 +1,10 @@
 module.exports = function (sequelize, DataTypes) {
     var Users = sequelize.define("Users", {
-        id: {
-            type: DataTypes.INTEGER
-            , autoIncrement: true
-            , primaryKey: true
-        },
+        // id: {
+        //     type: DataTypes.INTEGER
+        //     , autoIncrement: true
+        //     , primaryKey: true
+        // },
         first_name: {
             type: DataTypes.STRING,
             allowNull: false,
@@ -26,13 +26,13 @@ module.exports = function (sequelize, DataTypes) {
             , allowNull: false
         }
     });
-    Users.associate = function(models) {
-        // Associating Users with Activities
-        // When a User is deleted, also delete any Activities
-        Users.hasMany(models.Activities, {
-          onDelete: "cascade"
-        });
-      };
+    // Users.associate = function(models) {
+    //     // Associating Users with Activities
+    //     // When a User is deleted, also delete any Activities
+    //     Users.hasMany(models.Activities, {
+    //       onDelete: "cascade"
+    //     });
+    //   };
     
       return Users;
     };
