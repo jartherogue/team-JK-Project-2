@@ -1,22 +1,24 @@
 $(document).ready(function () {
   // Getting references to the name input and author container, as well as the table body
-  $(document).on("submit", "#user-form", insertUser);
-  function insertUser(event) {
+  $(document).on("submit", "#new-activity", insertActivity);
+  function insertActivity(event) {
       event.preventDefault();
-      var User = {
-          first_name: $("#first_name").val().trim(),
-          last_name: $("#last_name").val().trim(),
-          email_address: $("#email").val().trim(),
-          password: $("#password").val().trim(),
+      var Activities = {
+          date: $("#date-input").val().trim(),
+          time: $("#time-input").val().trim(),
+          city: $("#city-input").val().trim(),
+          state: $("#state-input").val().trim(),
+          photo: $("#image-input").val().trim(),
+          description: $("#description-input").val().trim(),
       };
-      $("#date").val("");
-      $("#time").val("");
-      $("#city").val("");
-      $("#state").val("");
-      $("#image").val("");
-      $("#description").val("");
+      $("#date-input").val("");
+      $("#time-input").val("");
+      $("#city-input").val("");
+      $("#state-input").val("");
+      $("#image-input").val("");
+      $("#description-input").val("");
 
-      $.post("/api/actvities", Activities);
+      $.post("/api/activities", Activities);
   }
 });
 
