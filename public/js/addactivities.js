@@ -18,7 +18,7 @@ $(document).ready(function () {
       $("#image-input").val("");
       $("#description-input").val("");
 
-      $.post("/api/actvities", Activities);
+      $.post("/api/activities", Activities);
   }
 });
 
