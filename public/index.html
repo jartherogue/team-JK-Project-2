@@ -1,22 +1,20 @@
-<!DOCTYPE html>
+!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
-    <title>jQuery Swipe Left or Right</title>
+    <title>Folly Finder</title>
     <link href='https://fonts.googleapis.com/css?family=Product+Sans:400,400i,700,700i' rel='stylesheet' type='text/css'>
     <script src="https://use.fontawesome.com/e0caea0977.js"></script>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u"
         crossorigin="anonymous">
     <link rel="stylesheet" href="css/style.css">
 </head>
-
 <body>
-    <button type="button" class="btn btn-info btn-lg" data-toggle="modal" data-target="#myModal">Login</button>
+    <!-- begin modal -->
     <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
         <div class="modal-dialog modal-dialog-centered" role="document">
             <div class="modal-content">
-                <div class="modal-header">
+                <div class="modal-header">Welcome to Find your Folly
                     <h5 class="modal-title" id="exampleModalLongTitle">Login</h5>
                     <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                         <span aria-hidden="true">&times;</span>
@@ -40,6 +38,8 @@
             </div>
         </div>
     </div>
+    <!-- end modal -->
+    <!-- begin nav bar -->
     <nav class="navbar navbar-default navbar-fixed-top">
         <div class="container">
             <div class="navbar-header">
@@ -50,12 +50,15 @@
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                 </button>
-                <a class="navbar-brand" href="#">Project name</a>
+                <a class="navbar-brand" href="#">Find your Folly.</a>
             </div>
             <div id="navbar" class="collapse navbar-collapse">
                 <ul class="nav navbar-nav">
                     <li class="active">
-                        <a href="#">Home</a>
+                        <a href="/">Home</a>
+                    </li>
+                    <li>
+                        <a class="btn btn-light" data-toggle="modal" data-target="#myModal">Login</a>
                     </li>
                     <li>
                         <a class="btn btn-light" href="/signup">Create Account</a>
@@ -68,36 +71,42 @@
             <!--/.nav-collapse -->
         </div>
     </nav>
+    <!-- end nav bar -->
     <div class="container">
+            <img class="img1" src="https://tse2.mm.bing.net/th?id=OIP.YMgQ5SozygqU-udcKDF1MAHaE7&pid=Api">
+            <img class="img2" src="https://www.princeton.edu/sites/default/files/styles/1x_full_2x_half_crop/public/images/2017/12/20170509_Eng_Library_DJA_012_3.jpg?itok=-WaXTWX8">
+            <img class="img3" src="https://www.zsl.org/sites/default/files/styles/wysiwyg/public/image/2014-07/meet-the-giraffes-whipsnade.jpg?itok=5pR0DGxZ">
+            <img class="img4" src="http://www.templesquare.com/wp-content/uploads/2015/09/Dinosaurs-history-museum.jpg">
         <p>Swipe Functionality
             <div class="starter-template row">
                 <div class="col-md-6 col-md-offset-3 testField">
-                    <div class="row">
-                        <div id="dateTime" class="col-sm-12">
-                            Date & Time
-                        </div>
+                    <h2>Find your Follie</h2>
+                    <div id="swipeMe">
+                        <h2 id="count">1
+                            <div class="row">
+                                <div id="dateTime" class="col-sm-12">
+                                    Date & Time
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div id="cityState" class="col-sm-12">
+                                    City & State
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div id="photo" class="col-sm-12">
+                                    Photo
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div id="description" class="col-sm-12 swipeRows">
+                                    Description
+                                </div>
+                            </div>
+                        </h2>
+                        <a href="#" class="previous round l-arrow btn btnsforswipe" id="pgPrev">&#8249;</a>
+                        <a href="#" class="next round r-arrow btn btnsforswipe" id="pgNext">&#8250;</a>
                     </div>
-                    <div class="row">
-                        <div id="cityState" class="col-sm-12">
-                            City & State
-                        </div>
-                    </div>
-                    <div class="row">
-                        <div id="photo" class="col-sm-12">
-                            Photo
-                        </div>
-                    </div>
-                    <div class="row">
-                        <div id="description" class="col-sm-12 swipeRows">
-                            Description
-                        </div>
-                    </div>
-                    <p>
-                        <b>Swipe Functionality:</b> swipe left
-                        <em>(to increase)</em> or right
-                        <em>(to decrease)</em> the number</p>
-                    <h2 id="count">1</h2>
-
                     <br>
                     <!-- <a href="#" class="previous round l-arrow" id="pgPrev">&#8249;</a>
           <a href="#" class="next round r-arrow" id="pgNext">&#8250;</a> -->
@@ -121,7 +130,5 @@
             $('#myInput').trigger('focus')
         })
     </script>
-
 </body>
-
 </html>
