@@ -1,34 +1,25 @@
 var db = require("../models");
 
 module.exports = function (app) {
-
-  app.get("/api/activities", function(req, res) {
-    // Here we add an "include" property to our options in our findAll query
-    // We set the value to an array of the models we want to include in a left outer join
-    // In this case, just db.Post
-    db.Activities.findAll({
-      include: [db.Post]
-    }).then(function(dbactivities) {
-      res.json(dbActivities);
-    });
+  // GET route for getting all of the activities
+  app.get("/api/activities/", function(req, res) {
+    db.Post.findAll({})
+      .then(function(dbactivities) {
+        res.json(dbactivities);
+      });
   });
 
-
+    // Get route for retrieving a single activity
   app.get("/api/activities/:id", function(req, res) {
-    // Here we add an "include" property to our options in our findOne query
-    // We set the value to an array of the models we want to include in a left outer join
-    // In this case, just db.Post
-    db.Activities.findOne({
+    db.Post.findOne({
       where: {
         id: req.params.id
-      },
-      include: [db.Activities]
-    }).then(function(dbActivities) {
-      res.json(dbActivities);
-    });
-  });
-  
-  
+      }
+    })
+      .then(function(dbActivities) {
+        res.json(dbActivities);
+      });
+  }); 
   app.post("/api/activities", function (req, res) {
     db.Activities.create(req.body).then(function (dbActivities) {
       res.json(dbActivities);
@@ -36,8 +27,4 @@ module.exports = function (app) {
       res.status(401).json(error);
     })
   });
-
-
-
-
 }
