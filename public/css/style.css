@@ -2,6 +2,7 @@ body {
     background-color: teal;
     color: white;
     font-size: 25px;
+<<<<<<< HEAD
 }
 
 /* .navbar-default .navbar-brand,
@@ -12,6 +13,18 @@ body {
     font-size: 20px;
 } */
 body {
+=======
+ }
+ 
+ /* .navbar-default .navbar-brand,
+ .navbar-default .navbar-nav>li>a,
+ .navbar-default .navbar-nav>.active>a, .navbar-default .navbar-nav>.active>a:focus, .navbar-default .navbar-nav>.active>a:hover
+ {
+    color: teal;
+    font-size: 20px;
+ } */
+ body {
+>>>>>>> ae2898e682d3ae8a3ab6390e2eaeca787738db01
     font-family: 'Product Sans', Arial, sans-serif;
     font-size: 16px;
     background-color: #F2F2F2;
@@ -24,34 +37,40 @@ body {
    margin-top: 100px;
    }
    .navBarmargin{
+<<<<<<< HEAD
    margin-top: 50px;
    }
    
+=======
+   margin-top: 100px;
+   }
+  
+>>>>>>> ae2898e682d3ae8a3ab6390e2eaeca787738db01
    .testField{
    border: 1px solid #828282;
    padding: 20px;
-   
+  
    }
-   
+  
    #swipeMe{
    background-color: #10BBB3;
    color: #FFFFFF;
    padding: 10px;
-   
+  
    }
-   
+  
    /* fixed nav buttons */
-   
+  
    .l-arrow {
     position: fixed;
    left: 0;
-   
+  
    }
    .r-arrow {
     position: fixed;
     right: 0;
    }
-   
+  
    /* button styling */
    .btnsforswipe {
     border-radius: 50%;  
@@ -64,14 +83,14 @@ body {
     margin: 4px 2px;
     transition: 0.3s;
    }
-   
+  
    .btn:hover {
     background-color: black;
     color: white;
    }
-   
-   
-   
+  
+  
+  
    /* flex box */
    .wrapper {
     display: flex;  
@@ -79,37 +98,37 @@ body {
     font-weight: bold;
     text-align: center;
    }
-   
+  
    .wrapper > * {
     padding: 10px;
     flex: 1 100%;
    }
-   
+  
    .header {
     background: tomato;
    }
-   
+  
    .footer {
     background: lightgreen;
    }
-   
+  
    .main {
     text-align: left;
     background: deepskyblue;
    }
-   
+  
    .aside-1 {
     background: gold;
    }
-   
+  
    .aside-2 {
     background: hotpink;
    }
-   
+  
    @media all and (min-width: 600px) {
     .aside { flex: 1 auto; }
    }
-   
+  
    @media all and (min-width: 800px) {
     .main    { flex: 3 0px; }
     .aside-1 { order: 1; }
@@ -117,7 +136,8 @@ body {
     .aside-2 { order: 3; }
     .footer  { order: 4; }
    }
-   
+  
    body {
-    padding: 2em; 
+    padding: 2em;
    }
+   
