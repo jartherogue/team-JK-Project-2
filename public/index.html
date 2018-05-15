@@ -3,7 +3,7 @@
 
 <head>
     <meta charset="UTF-8">
-    <title>jQuery Swipe Left or Right</title>
+    <title>Folly Finder</title>
     <link href='https://fonts.googleapis.com/css?family=Product+Sans:400,400i,700,700i' rel='stylesheet' type='text/css'>
     <script src="https://use.fontawesome.com/e0caea0977.js"></script>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u"
@@ -12,34 +12,37 @@
 </head>
 
 <body>
-        <button type="button" class="btn btn-info btn-lg" data-toggle="modal" data-target="#myModal">Login</button>
-        <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
-                <div class="modal-dialog modal-dialog-centered" role="document">
-                    <div class="modal-content">
-                        <div class="modal-header">
-                            <h5 class="modal-title" id="exampleModalLongTitle">Login</h5>
-                            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                                <span aria-hidden="true">&times;</span>
-                            </button>
+    <!-- begin modal -->
+    <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered" role="document">
+            <div class="modal-content">
+                <div class="modal-header">Welcome to Find your Folly
+                    <h5 class="modal-title" id="exampleModalLongTitle">Login</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <form>
+                        <div class="form-group">
+                            <label for="email" class="col-form-label">Email:</label>
+                            <input type="text" class="form-control" id="email">
                         </div>
-                        <div class="modal-body">
-                            <form>
-                                <div class="form-group">
-                                    <label for="email" class="col-form-label">Email:</label>
-                                    <input type="text" class="form-control" id="email">
-                                </div>
-                                <div class="form-group">
-                                        <label for="password" class="col-form-label">Password:</label>
-                                        <input type="text" class="form-control" id="password">
-                                    </div>
-                            </form>
-                            </div>
-                        <div class="modal-footer">
-                            <button type="button" class="btn btn-secondary" data-dismiss="modal">Enter</button>
+                        <div class="form-group">
+                            <label for="password" class="col-form-label">Password:</label>
+                            <input type="text" class="form-control" id="password">
                         </div>
-                    </div>
+                    </form>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Enter</button>
                 </div>
             </div>
+        </div>
+    </div>
+    <!-- end modal -->
+
+    <!-- begin nav bar -->
     <nav class="navbar navbar-default navbar-fixed-top">
         <div class="container">
             <div class="navbar-header">
@@ -50,12 +53,15 @@
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                 </button>
-                <a class="navbar-brand" href="#">Project name</a>
+                <a class="navbar-brand" href="#">Find your Folly.</a>
             </div>
             <div id="navbar" class="collapse navbar-collapse">
                 <ul class="nav navbar-nav">
                     <li class="active">
-                        <a href="#">Home</a>
+                        <a href="/">Home</a>
+                    </li>
+                    <li>
+                        <a class="btn btn-light" data-toggle="modal" data-target="#myModal">Login</a>
                     </li>
                     <li>
                         <a class="btn btn-light" href="/signup">Create Account</a>
@@ -63,28 +69,45 @@
                     <li>
                         <a class="btn btn-light" href="/form">Create Activity</a>
                     </li>
+
                 </ul>
             </div>
             <!--/.nav-collapse -->
         </div>
     </nav>
+    <!-- end nav bar -->
     <div class="container">
         <p>Swipe Functionality
             <div class="starter-template row">
                 <div class="col-md-6 col-md-offset-3 testField">
-                    <p>
-                        <b>Swipe Functionality:</b> swipe left
-                        <em>(to increase)</em> or right
-                        <em>(to decrease)</em> the number</p>
-                    <h2 id="count">1</h2>
+                    <h2>Find your Follie</h2>
+
                     <div id="swipeMe">
 
-                        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Debitis eum perspiciatis deleniti quaerat sequi facere molestias,
-                        beatae est laboriosam unde. Quibusdam officia dolores laborum nulla facilis dignissimos in ullam.
-                        Quia!
-
-                        <a href="#" class="previous round l-arrow btn" id="pgPrev">&#8249;</a>
-                        <a href="#" class="next round r-arrow btn" id="pgNext">&#8250;</a>
+                        <h2 id="count">1
+                            <div class="row">
+                                <div id="dateTime" class="col-sm-12">
+                                    Date & Time
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div id="cityState" class="col-sm-12">
+                                    City & State
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div id="photo" class="col-sm-12">
+                                    Photo
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div id="description" class="col-sm-12 swipeRows">
+                                    Description
+                                </div>
+                            </div>
+                        </h2>
+                        <a href="#" class="previous round l-arrow btn btnsforswipe" id="pgPrev">&#8249;</a>
+                        <a href="#" class="next round r-arrow btn btnsforswipe" id="pgNext">&#8250;</a>
                     </div>
                     <br>
                     <!-- <a href="#" class="previous round l-arrow" id="pgPrev">&#8249;</a>
@@ -105,9 +128,9 @@
     <!-- Viewport variables -->
     <script src="js/activities.js"></script>
     <script type="text/javascript">
-    $('#myModal').on('shown.bs.modal', function () {
-      $('#myInput').trigger('focus')
-    })
+        $('#myModal').on('shown.bs.modal', function () {
+            $('#myInput').trigger('focus')
+        })
     </script>
 
 </body>

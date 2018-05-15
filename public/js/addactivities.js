@@ -26,3 +26,12 @@ $(document).ready(function () {
 
 
 
+  // InitializeRows handles appending all of our constructed post HTML inside blogContainer
+  function initializeRows() {
+    blogContainer.empty();
+    var postsToAdd = [];
+    for (var i = 0; i < posts.length; i++) {
+      postsToAdd.push(createNewRow(posts[i]));
+    }
+    blogContainer.append(postsToAdd);
+  }
