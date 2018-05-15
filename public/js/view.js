@@ -86,7 +86,7 @@ $(document).ready(function() {
     }
    
     // This function constructs an activity row
-    function createNewRow(activitie) {
+    function createNewRow(activities) {
       var $newInputRow = $(
         [
           "<li class='list-group-item activitie-item'>",
