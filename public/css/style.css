@@ -20,6 +20,9 @@ body {
    .mainContent {
     margin-top: 75px;
    }
+   .col-sm-12 {
+       text-align: center;
+   }
    .starter-template{
    margin-top: 100px;
    }

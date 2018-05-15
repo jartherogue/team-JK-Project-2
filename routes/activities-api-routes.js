@@ -8,14 +8,9 @@ module.exports = function(app) {
         res.status(401).json(error);
     })
   });
-  app.get("/api/activities", function(req, res){
-    db.Activities.findOne({
-      where: {
-        id: req.params.id
-      },
-      include: [db.Activities]
-    }).then(function(dbActivities) {
-      res.json(dbActivities);
+  app.get("/api/myactivities", function(req, res) {
+    db.Activities.findAll({}).then(function(activities) {
+      res.json(activities);
     });
   });
 }
