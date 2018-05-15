@@ -4,23 +4,27 @@ body {
     font-size: 25px;
 }
 
-.navbar-default .navbar-brand,
+/* .navbar-default .navbar-brand,
 .navbar-default .navbar-nav>li>a,
 .navbar-default .navbar-nav>.active>a, .navbar-default .navbar-nav>.active>a:focus, .navbar-default .navbar-nav>.active>a:hover
 {
     color: teal;
     font-size: 20px;
-}
+} */
 body {
     font-family: 'Product Sans', Arial, sans-serif;
     font-size: 16px;
     background-color: #F2F2F2;
+    color: black;
    }
    .mainContent {
     margin-top: 75px;
    }
    .starter-template{
    margin-top: 100px;
+   }
+   .navBarmargin{
+   margin-top: 50px;
    }
    
    .testField{
@@ -49,7 +53,7 @@ body {
    }
    
    /* button styling */
-   .btn {
+   .btnsforswipe {
     border-radius: 50%;  
     background-color: #ddd;
     border: none;
