@@ -8,17 +8,14 @@ module.exports = function(app) {
         res.status(401).json(error);
     })
   });
-  // app.post("/api/Activities", function(req, res) {
-  //   console.log(req.body);
-  //   db.Post.create({
-  //     date: req.body.date,
-  //     time: req.body.time,
-  //     city: req.body.city,
-  //     photo: req.body.photo,
-  //     description: req.body.description
-  //   })
-  //     .then(function(dbActivities) {
-  //       res.json(dbActivities);
-  //     });
-  // });
+  app.get("/api/activities", function(req, res){
+    db.Activities.findOne({
+      where: {
+        id: req.params.id
+      },
+      include: [db.Activities]
+    }).then(function(dbActivities) {
+      res.json(dbActivities);
+    });
+  });
 }

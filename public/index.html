@@ -12,34 +12,34 @@
 </head>
 
 <body>
-        <button type="button" class="btn btn-info btn-lg" data-toggle="modal" data-target="#myModal">Login</button>
-        <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
-                <div class="modal-dialog modal-dialog-centered" role="document">
-                    <div class="modal-content">
-                        <div class="modal-header">
-                            <h5 class="modal-title" id="exampleModalLongTitle">Login</h5>
-                            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                                <span aria-hidden="true">&times;</span>
-                            </button>
+    <button type="button" class="btn btn-info btn-lg" data-toggle="modal" data-target="#myModal">Login</button>
+    <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLongTitle">Login</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <form>
+                        <div class="form-group">
+                            <label for="email" class="col-form-label">Email:</label>
+                            <input type="text" class="form-control" id="email">
                         </div>
-                        <div class="modal-body">
-                            <form>
-                                <div class="form-group">
-                                    <label for="email" class="col-form-label">Email:</label>
-                                    <input type="text" class="form-control" id="email">
-                                </div>
-                                <div class="form-group">
-                                        <label for="password" class="col-form-label">Password:</label>
-                                        <input type="text" class="form-control" id="password">
-                                    </div>
-                            </form>
-                            </div>
-                        <div class="modal-footer">
-                            <button type="button" class="btn btn-secondary" data-dismiss="modal">Enter</button>
+                        <div class="form-group">
+                            <label for="password" class="col-form-label">Password:</label>
+                            <input type="text" class="form-control" id="password">
                         </div>
-                    </div>
+                    </form>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Enter</button>
                 </div>
             </div>
+        </div>
+    </div>
     <nav class="navbar navbar-default navbar-fixed-top">
         <div class="container">
             <div class="navbar-header">
@@ -72,20 +72,32 @@
         <p>Swipe Functionality
             <div class="starter-template row">
                 <div class="col-md-6 col-md-offset-3 testField">
+                    <div class="row">
+                        <div id="dateTime" class="col-sm-12">
+                            Date & Time
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div id="cityState" class="col-sm-12">
+                            City & State
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div id="photo" class="col-sm-12">
+                            Photo
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div id="description" class="col-sm-12 swipeRows">
+                            Description
+                        </div>
+                    </div>
                     <p>
                         <b>Swipe Functionality:</b> swipe left
                         <em>(to increase)</em> or right
                         <em>(to decrease)</em> the number</p>
                     <h2 id="count">1</h2>
-                    <div id="swipeMe">
 
-                        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Debitis eum perspiciatis deleniti quaerat sequi facere molestias,
-                        beatae est laboriosam unde. Quibusdam officia dolores laborum nulla facilis dignissimos in ullam.
-                        Quia!
-
-                        <a href="#" class="previous round l-arrow btn" id="pgPrev">&#8249;</a>
-                        <a href="#" class="next round r-arrow btn" id="pgNext">&#8250;</a>
-                    </div>
                     <br>
                     <!-- <a href="#" class="previous round l-arrow" id="pgPrev">&#8249;</a>
           <a href="#" class="next round r-arrow" id="pgNext">&#8250;</a> -->
@@ -105,9 +117,9 @@
     <!-- Viewport variables -->
     <script src="js/activities.js"></script>
     <script type="text/javascript">
-    $('#myModal').on('shown.bs.modal', function () {
-      $('#myInput').trigger('focus')
-    })
+        $('#myModal').on('shown.bs.modal', function () {
+            $('#myInput').trigger('focus')
+        })
     </script>
 
 </body>
