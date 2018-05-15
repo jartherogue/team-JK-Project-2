@@ -39,7 +39,7 @@ $(document).ready(function () {
         if (response.date = null) {
             console.log("error, no data found");
         } else {
-            var dateDiv = $("<div id='dateDiv' class='col-sm-6'>");
+            var dateDiv = $("<div id='dateDiv'>");
             var dateP = $("<p id='dateP'>" + date + "</p>");
             dateDiv.prepend(dateP);
             $("#dateTime").prepend(dateDiv);
@@ -47,7 +47,7 @@ $(document).ready(function () {
         if (response.time = null) {
             console.log("error, no data found");
         } else {
-            var timeDiv = $("<div id='dateDiv' class='col-sm-6'>");
+            var timeDiv = $("<div id='dateDiv'>");
             var timeP = $("<p id='timeP'>" + time + "</p>");
             timeDiv.prepend(timeP);
             $("#dateTime").prepend(timeDiv);
@@ -55,7 +55,7 @@ $(document).ready(function () {
         if (response.city = null) {
             console.log("error, no data found");
         } else {
-            var cityDiv = $("<div id='cityDiv' class='col-sm-6'>");
+            var cityDiv = $("<div id='cityDiv'>");
             var cityP = $("<p id='cityP'>" + city + "</p>");
             cityDiv.prepend(cityP);
             $("#cityState").prepend(cityDiv);
@@ -63,7 +63,7 @@ $(document).ready(function () {
         if (response.state = null) {
             console.log("error, no data found");
         } else {
-            var stateDiv = $("<div id='dateDiv' class='col-sm-6'>");
+            var stateDiv = $("<div id='dateDiv'>");
             var stateP = $("<p id='stateP'>" + state + "</p>");
             stateDiv.prepend(stateP);
             $("#cityState").prepend(stateDiv);
@@ -71,7 +71,7 @@ $(document).ready(function () {
         if (response.photo = null) {
             console.log("error, no data found");
         } else {
-            var photoDiv = $("<div id='photoDiv' class='col-sm-12'>");
+            var photoDiv = $("<div id='photoDiv'>");
             var photoImg = $("<img>");
             photoImg.attr("src", photo);
             photoImg.attr('alt', 'results image')
@@ -80,7 +80,7 @@ $(document).ready(function () {
         } if (response.description = null) {
             console.log("error, no data found");
         } else {
-            var descriptionDiv = $("<div id='dateDiv' class='col-sm-12'>");
+            var descriptionDiv = $("<div id='dateDiv'>");
             var descriptionP = $("<p id='descriptionP'>" + description + "</p>");
             descriptionDiv.prepend(descriptionP);
             $("#description").prepend(descriptionDiv);
