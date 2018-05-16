@@ -1,8 +1,8 @@
 {
   "development": {
     "username": "root",
-    "password": "cangetin",
-    "database": "follyfinder_safe",
+    "password": "Jallison2018",
+    "database": "follyfinder_db",
     "host": "127.0.0.1",
     "dialect": "mysql"
   },
