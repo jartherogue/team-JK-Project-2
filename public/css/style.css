@@ -1,7 +1,10 @@
 body {
     background-color: teal;
-    color: white;
+    color: teal;
     font-size: 25px;
+    -webkit-box-shadow: 12px 29px 81px 0px rgba(0, 0, 0, 0.75);
+    -moz-box-shadow: 12px 29px 81px 0px rgba(0, 0, 0, 0.75);
+    box-shadow: 12px 29px 81px 0px rgba(0, 0, 0, 0.75);
  }
  
  /* .navbar-default .navbar-brand,
@@ -15,10 +18,11 @@ body {
     font-family: 'Product Sans', Arial, sans-serif;
     font-size: 16px;
     background-color: #F2F2F2;
-    color: black;
+    color: teal;
    }
    .mainContent {
     margin-top: 75px;
+    
    }
    .starter-template{
    margin-top: 100px;
@@ -27,11 +31,7 @@ body {
    margin-top: 100px;
    }
   
-   .testField{
-   border: 1px solid #828282;
-   padding: 20px;
-  
-   }
+ 
   
    #swipeMe{
    background-color: #10BBB3;
@@ -120,5 +120,41 @@ body {
   
    body {
     padding: 2em;
+    
    }
+
+
+.img1 {
+ position: absolute;
+ left: 0px;
+ top: 50px;
+ z-index: -2;
+ width: 325px;
+ height: 275px;
+}
+.img2 {
+ position: absolute;
+ left: 35px;
+ top: 295px;
+ z-index: -1;
+ width: 325px;
+ height: 215px;
+}
+.img3 {
+ position: absolute;
+ left: 955px;
+ top: 50px;
+ z-index: -2;
+ width: 325px;
+ height: 275px;
+}
+.img4 {
+ position: absolute;
+ left: 920px;
+ top: 295px;
+ z-index: -1;
+ width: 325px;
+ height: 215px;
+}
+
    
