@@ -1,7 +1,8 @@
+var userChoice = 0;
+
 $('#pgNext').on('click', function (event) {
   $.get("/api/myactivities", function (response) {
     console.log(response);
-    var userChoice = 0;
     userChoice++;
     console.log(userChoice);
     var date = response[userChoice].date;
@@ -47,6 +48,7 @@ $('#pgNext').on('click', function (event) {
     } else {
       var photoDiv = $("<div id='photoDiv'>");
       var photoImg = $("<img>");
+      photoImg.attr("id", "imgDiv");
       photoImg.attr("src", photo);
       photoImg.attr('alt', 'results image')
       photoDiv.html(photoImg);

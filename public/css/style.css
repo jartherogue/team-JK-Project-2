@@ -46,11 +46,13 @@ body {
   
    .l-arrow {
     position: fixed;
+    top: 50%;
    left: 0;
   
    }
    .r-arrow {
     position: fixed;
+    top: 50%;
     right: 0;
    }
   
@@ -156,4 +158,3 @@ body {
     width: 325px;
     height: 215px;
     }
-   
