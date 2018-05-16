@@ -39,8 +39,8 @@ $(document).ready(function () {
         if (response.date = null) {
             console.log("error, no data found");
         } else {
-            var dateDiv = $("<div id='dateDiv'>");
-            var dateP = $("<p id='dateP'>" + date + "</p>");
+            var dateDiv = $("<div id='dateDiv'>" );
+            var dateP = $("<p id='dateP'>" + "Event Date: " + date + "</p>");
             dateDiv.prepend(dateP);
             $("#dateTime").prepend(dateDiv);
         }
@@ -48,7 +48,7 @@ $(document).ready(function () {
             console.log("error, no data found");
         } else {
             var timeDiv = $("<div id='dateDiv'>");
-            var timeP = $("<p id='timeP'>" + time + "</p>");
+            var timeP = $("<p id='timeP'>" + "Time of event: " + time + "</p>");
             timeDiv.prepend(timeP);
             $("#dateTime").prepend(timeDiv);
         }
@@ -56,7 +56,7 @@ $(document).ready(function () {
             console.log("error, no data found");
         } else {
             var cityDiv = $("<div id='cityDiv'>");
-            var cityP = $("<p id='cityP'>" + city + "</p>");
+            var cityP = $("<p id='cityP'>" + "Event City: " + city + "</p>");
             cityDiv.prepend(cityP);
             $("#cityState").prepend(cityDiv);
         }
@@ -64,7 +64,7 @@ $(document).ready(function () {
             console.log("error, no data found");
         } else {
             var stateDiv = $("<div id='dateDiv'>");
-            var stateP = $("<p id='stateP'>" + state + "</p>");
+            var stateP = $("<p id='stateP'>" + "Event State: "+ state + "</p>");
             stateDiv.prepend(stateP);
             $("#cityState").prepend(stateDiv);
         }
