@@ -3,60 +3,61 @@ $('#pgNext').on('click', function (event) {
     console.log(response);
     var userChoice = 0;
     userChoice++;
+    console.log(userChoice);
     var date = response[userChoice].date;
     var time = response[userChoice].time;
     var city = response[userChoice].city;
     var state = response[userChoice].state;
     var photo = response[userChoice].photo
     var description = response[userChoice].description;
-    if (date = null) {
+    if (response[userChoice].date = null) {
       console.log("error, no data found");
     } else {
       var dateDiv = $("<div id='dateDiv'>");
       var dateP = $("<p id='dateP'>" + "Event Date: " + date + "</p>");
-      dateDiv.prepend(dateP);
-      $("#dateTime").prepend(dateDiv);
+      dateDiv.html(dateP);
+      $("#dateTime").html(dateDiv);
     }
-    if (time = null) {
+    if (response[userChoice].time = null) {
       console.log("error, no data found");
     } else {
       var timeDiv = $("<div id='dateDiv'>");
       var timeP = $("<p id='timeP'>" + "Time of event: " + time + "</p>");
-      timeDiv.prepend(timeP);
-      $("#dateTime").prepend(timeDiv);
+      timeDiv.html(timeP);
+      $("#dateTime").html(timeDiv);
     }
-    if (city = null) {
+    if (response[userChoice].city = null) {
       console.log("error, no data found");
     } else {
       var cityDiv = $("<div id='cityDiv'>");
       var cityP = $("<p id='cityP'>" + "Event City: " + city + "</p>");
-      cityDiv.prepend(cityP);
-      $("#cityState").prepend(cityDiv);
+      cityDiv.html(cityP);
+      $("#cityState").html(cityDiv);
     }
-    if (state = null) {
+    if (response[userChoice].state = null) {
       console.log("error, no data found");
     } else {
       var stateDiv = $("<div id='dateDiv'>");
       var stateP = $("<p id='stateP'>" + "Event State: " + state + "</p>");
-      stateDiv.prepend(stateP);
-      $("#cityState").prepend(stateDiv);
+      stateDiv.html(stateP);
+      $("#cityState").html(stateDiv);
     }
-    if (photo = null) {
+    if (response[userChoice].state = null) {
       console.log("error, no data found");
     } else {
       var photoDiv = $("<div id='photoDiv'>");
       var photoImg = $("<img>");
       photoImg.attr("src", photo);
       photoImg.attr('alt', 'results image')
-      photoDiv.prepend(photoImg);
-      $("#photo").prepend(photoDiv);
-    } if (description = null) {
+      photoDiv.html(photoImg);
+      $("#photo").html(photoDiv);
+    } if (response[userChoice].description = null) {
       console.log("error, no data found");
     } else {
       var descriptionDiv = $("<div id='dateDiv'>");
       var descriptionP = $("<p id='descriptionP'>" + description + "</p>");
-      descriptionDiv.prepend(descriptionP);
-      $("#description").prepend(descriptionDiv);
+      descriptionDiv.html(descriptionP);
+      $("#description").html(descriptionDiv);
     }
   });
 });

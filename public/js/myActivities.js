@@ -21,10 +21,11 @@ $(document).ready(function () {
     //     var counter = parseInt($("#count").text()) - 1;
     //     $("#count").text(counter);
     // });
-    $.ajax({
-        method: "GET"
-        , url: "http://localhost:8081/api/myactivities"
-    }).then(function (response) {
+    // $.ajax({
+    //     method: "GET"
+    //     , url: "http://localhost:8081/api/myactivities"
+    // }).then(function (response) {
+    $.get("/api/myactivities", function (response) {
         console.log(response);
 
         var date = response[0].date;
@@ -36,7 +37,7 @@ $(document).ready(function () {
         if (response.date = null) {
             console.log("error, no data found");
         } else {
-            var dateDiv = $("<div id='dateDiv'>" );
+            var dateDiv = $("<div id='dateDiv'>");
             var dateP = $("<p id='dateP'>" + "Event Date: " + date + "</p>");
             dateDiv.prepend(dateP);
             $("#dateTime").prepend(dateDiv);
@@ -61,7 +62,7 @@ $(document).ready(function () {
             console.log("error, no data found");
         } else {
             var stateDiv = $("<div id='dateDiv'>");
-            var stateP = $("<p id='stateP'>" + "Event State: "+ state + "</p>");
+            var stateP = $("<p id='stateP'>" + "Event State: " + state + "</p>");
             stateDiv.prepend(stateP);
             $("#cityState").prepend(stateDiv);
         }
