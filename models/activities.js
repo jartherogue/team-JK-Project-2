@@ -31,16 +31,16 @@ module.exports = function (sequelize, DataTypes) {
           , allowNull: false
       },
   });
-    // //   Users can have multiple Activities
-    //   Activities.associate = function(models) {
-    //       // We're saying that an activity should belong to a User.
-    //       // An activity can't be created without a user due to the foreign key constraint
-    //        Activities.belongsTo(models.Users,{
-    //         foreignKey: {
-    //           allowNull: false
-    //         }
-    //       });
-    //     };
+      // Users can have multiple Activities
+      // Activities.associate = function(models) {
+      //     // We're saying that an activity should belong to a User.
+      //     // An activity can't be created without a user due to the foreign key constraint
+      //      Activities.belongsTo(models.Users,{
+      //       foreignKey: {
+      //         allowNull: false
+      //       }
+      //     });
+      //   };
       
         return Activities;
       };
