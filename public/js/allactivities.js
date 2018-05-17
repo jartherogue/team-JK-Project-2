@@ -1,7 +1,8 @@
+var userChoice = 0;
+
 $('#pgNext').on('click', function (event) {
   $.get("/api/myactivities", function (response) {
     console.log(response);
-    var userChoice = 0;
     userChoice++;
     console.log(userChoice);
     var date = response[userChoice].date;
@@ -10,6 +11,11 @@ $('#pgNext').on('click', function (event) {
     var state = response[userChoice].state;
     var photo = response[userChoice].photo
     var description = response[userChoice].description;
+    console.log(response[userChoice].date);
+    console.log(response[userChoice].time);
+    console.log(response[userChoice].city);
+    console.log(response[userChoice].state);
+    console.log(response[userChoice].description);
     if (response[userChoice].date = null) {
       console.log("error, no data found");
     } else {
@@ -24,7 +30,7 @@ $('#pgNext').on('click', function (event) {
       var timeDiv = $("<div id='dateDiv'>");
       var timeP = $("<p id='timeP'>" + "Time of event: " + time + "</p>");
       timeDiv.html(timeP);
-      $("#dateTime").html(timeDiv);
+      $("#time").html(timeDiv);
     }
     if (response[userChoice].city = null) {
       console.log("error, no data found");
@@ -40,13 +46,14 @@ $('#pgNext').on('click', function (event) {
       var stateDiv = $("<div id='dateDiv'>");
       var stateP = $("<p id='stateP'>" + "Event State: " + state + "</p>");
       stateDiv.html(stateP);
-      $("#cityState").html(stateDiv);
+      $("#state").html(stateDiv);
     }
     if (response[userChoice].state = null) {
       console.log("error, no data found");
     } else {
       var photoDiv = $("<div id='photoDiv'>");
       var photoImg = $("<img>");
+      photoImg.attr("id", "imgDiv");
       photoImg.attr("src", photo);
       photoImg.attr('alt', 'results image')
       photoDiv.html(photoImg);
